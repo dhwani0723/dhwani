@@ -1,0 +1,43 @@
+Linear search
+
+def search(list,n):
+    for i in list:
+        if i== n:
+            print(n," is found at index ",
+            list.index(i)+1)
+            break
+    else:
+        print(n, " is not found, try Again")
+
+list= [88,76,9,23,18,53,39,69,11]
+
+
+n= int (input("Enter a number to search: "))
+
+search(list,n)
+
+
+
+Binary search
+
+
+
+print "* BINARY SEARCH METHOD\n"
+def bsm(arr,start,end,num):
+    if end>=start:
+        mid=start+(end-start)//2
+        if arr[mid]==x:
+            return mid
+        elif arr[mid]>x:
+            return bsm(arr,start,mid-1,x)
+        else:
+            return bsm(arr,mid+1,end,x)
+    else:
+        return -1
+arr=[22,56,81,60,44,39,20]
+x=int(input("Enter the number to be searched : "))
+result=bsm(arr,0,len(arr)-1,x)
+if result != -1:
+    print "Number is found at ",result
+else:
+    print "Number is not present"
